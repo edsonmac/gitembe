@@ -1,0 +1,26 @@
+﻿@model gitembe.Models.tTiempo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tTiempo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TiempoDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TiempoDesc)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TiempoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

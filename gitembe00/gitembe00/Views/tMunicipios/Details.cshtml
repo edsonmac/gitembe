@@ -1,0 +1,34 @@
+﻿@model gitembe.Models.tMunicipio
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tMunicipio</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MunicipioDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MunicipioDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MunicipioStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MunicipioStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MunicipioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

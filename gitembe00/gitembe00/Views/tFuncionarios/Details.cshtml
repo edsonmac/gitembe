@@ -1,0 +1,82 @@
+﻿@model gitembe.Models.tFuncionario
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tFuncionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tCargo.CargoSigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tCargo.CargoSigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tEscalafon.EscalafonDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tEscalafon.EscalafonDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tLugares.LugarDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tLugares.LugarDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tMunicipios.MunicipioDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tMunicipios.MunicipioDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tPersona.DocIdentidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tPersona.DocIdentidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tTiempo.TiempoDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tTiempo.TiempoDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basico)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.FuncionarioID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

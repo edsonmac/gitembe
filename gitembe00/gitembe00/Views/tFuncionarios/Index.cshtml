@@ -1,0 +1,75 @@
+﻿@model IEnumerable<gitembe.Models.tFuncionario>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tCargo.CargoSigla)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tEscalafon.EscalafonDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tLugares.LugarDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tMunicipios.MunicipioDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tPersona.DocIdentidad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tTiempo.TiempoDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Item)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Basico)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tCargo.CargoSigla)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tEscalafon.EscalafonDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tLugares.LugarDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tMunicipios.MunicipioDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tPersona.DocIdentidad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tTiempo.TiempoDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Item)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Basico)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.FuncionarioID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.FuncionarioID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.FuncionarioID })
+        </td>
+    </tr>
+}
+
+</table>

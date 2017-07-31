@@ -1,0 +1,88 @@
+﻿@model gitembe.Models.tFuncionario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tFuncionario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tCargo.CargoSigla)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tCargo.CargoSigla)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tEscalafon.EscalafonDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tEscalafon.EscalafonDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tLugares.LugarDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tLugares.LugarDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tMunicipios.MunicipioDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tMunicipios.MunicipioDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tPersona.DocIdentidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tPersona.DocIdentidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tTiempo.TiempoDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tTiempo.TiempoDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Item)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Item)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Basico)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Basico)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
